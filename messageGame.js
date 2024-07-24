@@ -3,9 +3,9 @@
 const gameObject = {
     gameOptions: ['Never have I ever', 'Would you rather', 'Kiss, Marry, Kill'],
     optionOne: ['Driven a fourwheeler', 'Jumped off a bridge', 'Ate a ghost pepper'],
-    optionTwo: ['Eat the hottest wings in the world once a year or never eat a wing again', 'Speak every language in the world except English or only speak english', 'Be a professional baseball player or professional football player'],
+    optionTwo: ['Eat the hottest wings in the world once a year or never eat a wing again', 'Speak every language in the world except English or only speak English', 'Be a professional baseball player or professional football player'],
     optionThree: ['Ryan Reynold, Joe Burrow, Matthew Mcconaughey', 'Megan Fox, Taylor Swift, Jennifer Aniston', 'Angelina Jolie, Blake Lively, Sabrina Carpenter'],
-    endOfGame: ['Thank you for playing!', 'Have a great day!', 'Play again sometime']
+    endOfGame: ['Thank you for playing!', 'Have a great day!', 'Play again sometime!']
 }
 
 //A function for getting a random number 
@@ -30,6 +30,11 @@ function messageGame(){
             newQuestion = gameObject.optionThree[randomElement()];
             break;
     }
+    //Getting the last part of the string
+    const finalMessage = gameObject.endOfGame[randomElement()];
+
+    //loging the varables in a good format
+    console.log(`The game that you are going to be playing is ${newGame}. Your Question is ${newGame} ${newQuestion}. ${finalMessage}`);
 }
 
 messageGame();
