@@ -15,26 +15,28 @@ function randomElement(){
 
 // the main function
 function messageGame(){
-    //creating a variable to store a random game from the gameOptions array
-    const newGame = gameObject.gameOptions[randomElement()];
+    //creating an array to store a random game from the gameOptions array
+    const gameArry = [];
+
+    gameArry.push(gameObject.gameOptions[randomElement()]);
+    
     //switch case 
-    let newQuestion;
-    switch(newGame){
+    switch(gameArry[0]){
         case 'Never have I ever':
-            newQuestion = gameObject.optionOne[randomElement()];
+            gameArry.push(gameObject.optionOne[randomElement()]);
             break;
         case 'Would you rather':
-            newQuestion = gameObject.optionTwo[randomElement()];
+            gameArry.push(gameObject.optionTwo[randomElement()]);
             break;
         case 'Kiss, Marry, Kill':
-            newQuestion = gameObject.optionThree[randomElement()];
+            gameArry.push(gameObject.optionThree[randomElement()]);
             break;
     }
     //Getting the last part of the string
-    const finalMessage = gameObject.endOfGame[randomElement()];
+    gameArry.push(gameObject.endOfGame[randomElement()]);
 
     //loging the varables in a good format
-    console.log(`The game that you are going to be playing is ${newGame}. Your Question is ${newGame} ${newQuestion}. ${finalMessage}`);
+    console.log(`The game that you are going to be playing is ${gameArry[0]}. Your Question is ${gameArry[0]} ${gameArry[1]}. ${gameArry[2]}`);
 }
 
 messageGame();
