@@ -17,5 +17,19 @@ function randomElement(){
 function messageGame(){
     //creating a variable to store a random game from the gameOptions array
     const newGame = gameObject.gameOptions[randomElement()];
-    console.log(newGame);
+    //switch case 
+    let newQuestion;
+    switch(newGame){
+        case 'Never have I ever':
+            newQuestion = gameObject.optionOne[randomElement()];
+            break;
+        case 'Would you rather':
+            newQuestion = gameObject.optionTwo[randomElement()];
+            break;
+        case 'Kiss, Marry, Kill':
+            newQuestion = gameObject.optionThree[randomElement()];
+            break;
+    }
 }
+
+messageGame();
