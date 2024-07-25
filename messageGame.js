@@ -36,7 +36,7 @@ function messageGame(){
     gameArry.push(gameObject.endOfGame[randomElement()]);
 
     //loging the varables in a good format
-    console.log(`The game that you are going to be playing is ${gameArry[0]}. Your Question is ${gameArry[0]} ${gameArry[1]}. ${gameArry[2]}`);
+    console.log(`The game that you are going to be playing is ${gameArry[0]}.\nYour question is ${gameArry[0]} ${gameArry[1]}.\n${gameArry[2]}`);
 }
 
 messageGame();
